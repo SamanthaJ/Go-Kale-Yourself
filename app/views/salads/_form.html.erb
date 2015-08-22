@@ -1,0 +1,25 @@
+<%= form_for(@salad) do |f| %>
+  <% if @salad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@salad.errors.count, "error") %> prohibited this salad from being saved:</h2>
+
+      <ul>
+      <% @salad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
