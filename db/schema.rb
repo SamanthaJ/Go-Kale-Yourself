@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150823161331) do
+ActiveRecord::Schema.define(version: 20150823163414) do
 
   create_table "salad_toppings", id: false, force: :cascade do |t|
     t.integer  "topping_id"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150823161331) do
     t.decimal  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "toppings", force: :cascade do |t|
