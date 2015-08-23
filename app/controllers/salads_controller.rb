@@ -1,4 +1,5 @@
 class SaladsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_salad, only: [:show, :edit, :update, :destroy]
 
   # GET /salads
