@@ -1,0 +1,5 @@
+<h1>This is what a non-admin will see.</h1>
+<hr>
+<% if current_user.admin? %>
+  <%= render 'admin_create_salad' %>
+<%end%>
